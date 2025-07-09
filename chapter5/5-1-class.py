@@ -72,3 +72,6 @@ print(a.first)  # Output: 4
 print(a.second)  # Output: 
 print(a.add())
 
+b = FourCal()
+print(b.add())  # Output: 0
+
