@@ -68,10 +68,29 @@ class FourCal:
 
 a = FourCal()
 a.setData(4, 2)
-print(a.first)  # Output: 4
-print(a.second)  # Output: 
-print(a.add())
+#print(a.first)  # Output: 4
+#print(a.second)  # Output: 
+#print(a.add())
 
 b = FourCal()
-print(b.add())  # Output: 0
+#print(b.add())  # Output: 0
 
+class MoreFourCal(FourCal):
+    def pow(self):
+        return self.first ** self.second
+    
+c = MoreFourCal()
+c.setData(3, 2)
+#print(c.add())
+#print(c.pow())
+
+
+class SafeFourCal(FourCal):
+    def div(self):
+        if self.second == 0:
+            return "Cannot divide by zero"
+        return super().div()
+    
+d = SafeFourCal()
+d.setData(10, 0)
+print(d.div())  # Output: Cannot divide by zero
